@@ -70,6 +70,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MainActivity.MovieViewHol
 
         ArrayList<Object> arrayList = new ArrayList<>();
         arrayList.addAll(newList);
+        //setMovieList(newList);
         notifyDataSetChanged();
     }
 }

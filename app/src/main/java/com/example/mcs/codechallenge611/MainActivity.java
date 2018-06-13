@@ -77,9 +77,17 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             String title = datum.getTitle().toLowerCase();
             if (title.contains(newText))
                 newList.add(datum);
+            String genre = datum.getGenre().toLowerCase();
+            if (genre.contains(newText))
+                newList.add(datum);
+            String year = datum.getYear();
+            if (year.contains(newText))
+                newList.add(datum);
+
         }
 
         mMovieAdapter.setFilter(newList);
+        System.out.print(newList);
         return true;
     }
 
@@ -90,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         public MovieViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
-            // title = itemView.findViewById(R.id.);
+           // title = itemView.findViewById(R.id.title);
         }
     }
 

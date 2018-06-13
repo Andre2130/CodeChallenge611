@@ -65,4 +65,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MainActivity.MovieViewHol
         // The adapter needs to know that the data has changed. If we don't call this, app will crash.
         notifyDataSetChanged();
     }
+
+    public void setFilter(ArrayList<Datum> newList){
+
+        ArrayList<Object> arrayList = new ArrayList<>();
+        arrayList.addAll(newList);
+        notifyDataSetChanged();
+    }
 }
